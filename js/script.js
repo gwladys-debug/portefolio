@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
         card.addEventListener('mouseleave', () => {
-            card.style.boxShadow = 'none';
+            card.style.boxShadow = '';
         });
     });
 });
