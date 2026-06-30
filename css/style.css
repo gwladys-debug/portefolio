@@ -233,6 +233,12 @@ body {
 /* ==========================================
    STYLE POUR LA PETITE IMAGE DU FOOTER 
    ========================================== */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
 
 footer p {
     display: inline-flex;
