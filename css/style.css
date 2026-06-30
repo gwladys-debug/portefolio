@@ -69,9 +69,15 @@ body {
     margin: 0.5rem;
 }
 
-/* Optionnel : donner un style "rempli" au bouton CV pour le différencier */
-.btn-cv {
-    background-color: rgba(251, 191, 36, 0.1);
+.hero-buttons {
+    display: inline-flex;
+    align-items: center;
+    /* Aligne les deux boutons parfaitement sur la même ligne horizontale */
+    justify-content: center;
+    gap: 1rem;
+    /* Crée un espace propre de 1rem entre les deux boutons */
+    flex-wrap: wrap;
+    /* Permet de les empiler proprement sur les très petits téléphones */
 }
 
 .accent {
