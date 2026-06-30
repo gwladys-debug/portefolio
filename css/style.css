@@ -138,6 +138,18 @@ body {
     box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
 }
 
+/* Bouton CV personnalisé et plus petit */
+.btn-cv {
+    padding: 0.5rem 1.2rem;
+    /* Réduit la hauteur et la largeur internes */
+    font-size: 0.75rem;
+    /* Diminue la taille de la police (d'origine à 0.85rem) */
+    letter-spacing: 1px;
+    /* Rapproche un peu les lettres */
+    background-color: rgba(251, 191, 36, 0.05);
+    /* Un léger fond pour le distinguer */
+}
+
 /* Section Projets & Grille */
 .portfolio-section {
     max-width: 1100px;
