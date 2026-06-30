@@ -69,15 +69,34 @@ body {
     margin: 0.5rem;
 }
 
+/* Conteneur pour aligner les deux boutons proprement */
 .hero-buttons {
-    display: inline-flex;
-    align-items: center;
-    /* Aligne les deux boutons parfaitement sur la même ligne horizontale */
+    display: flex;
     justify-content: center;
-    gap: 1rem;
-    /* Crée un espace propre de 1rem entre les deux boutons */
+    align-items: center;
+    gap: 1.5rem;
+    /* Crée un espace horizontal parfait entre les deux boutons */
+    margin-top: 1rem;
     flex-wrap: wrap;
-    /* Permet de les empiler proprement sur les très petits téléphones */
+    /* Évite les bugs sur les écrans de téléphone */
+}
+
+/* Style de base réinitialisé pour le bouton classique */
+.hero-buttons .btn {
+    margin: 0;
+    /* Nettoie les marges externes indésirables */
+}
+
+/* Force le bouton CV à être plus compact */
+.btn-cv {
+    padding: 0.5rem 1.2rem !important;
+    /* Réduit sa hauteur et sa largeur */
+    font-size: 0.75rem !important;
+    /* Diminue la taille du texte */
+    letter-spacing: 1px !important;
+    /* Rapproche un peu les lettres */
+    height: auto !important;
+    /* Empêche de s'étirer verticalement */
 }
 
 .accent {
