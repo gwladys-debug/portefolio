@@ -64,6 +64,16 @@ body {
     letter-spacing: 2px;
 }
 
+/* Pour espacer les boutons s'ils sont côte à côte */
+.hero-container .btn {
+    margin: 0.5rem;
+}
+
+/* Optionnel : donner un style "rempli" au bouton CV pour le différencier */
+.btn-cv {
+    background-color: rgba(251, 191, 36, 0.1);
+}
+
 .accent {
     color: var(--accent-gold);
     font-weight: 600;
