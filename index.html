@@ -31,9 +31,15 @@
           <a
             href="https://www.linkedin.com/in/gwladys-gely-0062a7216/"
             target="_blank"
+            rel="noopener noreferrer"
             ><i class="fab fa-linkedin"></i
           ></a>
-          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a
+            href="https://github.com/gwladys-debug"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github"></i
+          ></a>
 
           <a href="mailto:gwladysgely@gmail.com" class="email-link">
             <i class="fas fa-envelope"></i>
@@ -44,8 +50,8 @@
         <div class="hero-buttons">
           <a href="#projets" class="btn">Découvrir mes projets</a>
           <a
-            href="cv\cv-gwladys-noir-blanc.pdf"
-            download="cv\cv-gwladys-noir-blanc.pdf"
+            href="cv/cv-gwladys-noir-blanc.pdf"
+            download="cv-gwladys-gely.pdf"
             class="btn btn-cv"
           >
             <i class="fas fa-download"></i> Télécharger mon CV
@@ -61,6 +67,58 @@
       <div class="title-divider"></div>
 
       <div class="projects-grid">
+        <!-- Pix'nMotion -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Pix'nMotion</h3>
+            <p>
+              Plateforme web vitrine et portfolio pour un studio de production audiovisuelle en Martinique. Intègre une galerie multimédia dynamique avec lightbox, filtres et estimation de devis en ligne.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="technos-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Neon PostgreSQL</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">Resend</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/gwladys-debug" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> Code</a>
+              <a href="https://www.pixnmotion.com/" target="_blank" rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Démo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tropik Bwa -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Tropik Bwa</h3>
+            <p>
+              Plateforme d'agencement et de menuiserie sur-mesure en Martinique. Présente un catalogue d'essences locales et un simulateur de devis interactif multi-étapes avec back-office d'administration.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="technos-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Supabase / Neon</span>
+              <span class="tag">Formspree</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/gwladys-debug/tropik-bwa" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> Code</a>
+              <a href="https://space-desing.vercel.app/" target="_blank" rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Démo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noctura (Fè Moun Dòmi) -->
         <div class="project-card">
           <div class="project-content">
             <h3>Noctura (Fè Moun Dòmi)</h3>
@@ -73,70 +131,87 @@
             <div class="technos-tags">
               <span class="tag">React</span>
               <span class="tag">Tailwind CSS</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">Next.js</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank"><i class="fas fa-code"></i> Code</a>
-              <a href="https://somnia-psi-self.vercel.app/" target="_blank"
+              <a href="https://github.com/gwladys-debug" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> Code</a>
+              <a href="https://somnia-psi-self.vercel.app/" target="_blank" rel="noopener noreferrer"
                 ><i class="fas fa-external-link-alt"></i> Démo</a
               >
             </div>
           </div>
         </div>
 
+        <!-- Blog DWWM (Laravel) -->
         <div class="project-card">
           <div class="project-content">
-            <h3>Space Design</h3>
+            <h3>DWWM Blog</h3>
             <p>
-              Site vitrine interactif et sur-mesure conçu pour une entreprise de
-              menuiserie et de rénovation basée en Martinique.
+              Application de blog développée sous Laravel avec gestion des rôles, authentification sécurisée, CRUD complet pour les articles, filtrage par catégories/tags et modération des commentaires.
             </p>
           </div>
           <div class="project-footer">
             <div class="technos-tags">
-              <span class="tag">React</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Blade</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank"><i class="fas fa-code"></i> Code</a>
-              <a href="https://space-desing.vercel.app/" target="_blank"
-                ><i class="fas fa-external-link-alt"></i> Démo</a
-              >
+              <a href="https://github.com/gwladys-debug/dwwm-blog" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> Code</a>
             </div>
           </div>
         </div>
 
+        <!-- Resto Besto -->
         <div class="project-card">
           <div class="project-content">
             <h3>Resto Besto</h3>
             <p>
               Système complet de réservation en ligne pour un restaurant avec
-              gestion de la dynamique des tables et de la base de données PHP
-              POO.
+              gestion dynamique des tables et architecture orientée objet (Design Patterns Singleton, Factory, Data Mapper).
             </p>
           </div>
           <div class="project-footer">
             <div class="technos-tags">
               <span class="tag">PHP POO</span>
-              <span class="tag">MySQL</span>
+              <span class="tag">MySQL / PDO</span>
               <span class="tag">Architecture MVC</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank"><i class="fas fa-code"></i> Code</a>
-              <a href="#" target="_blank"
-                ><i class="fas fa-external-link-alt"></i> Démo</a
-              >
+              <a href="https://github.com/gwladys-debug" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> Code</a>
             </div>
           </div>
         </div>
+
+        <!-- ECF2 Journal -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3>ECF2 Journal de Stage</h3>
+            <p>
+              Application web de suivi du journal de stage pour la certification DWWM, permettant de consigner les activités quotidiennes et de les associer aux compétences du référentiel professionnel.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="technos-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/gwladys-debug" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
 
     <footer>
       <p>
         &copy; 2026 Gwladys Gely &bull; Fait avec passion en Martinique
-        <img src="images/images-drapeau.png" alt="Symbole" class="footer-img" />
+        <img src="images/images-drapeau.png" alt="Martinique" class="footer-img" />
       </p>
     </footer>
 
