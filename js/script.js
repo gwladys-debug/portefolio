@@ -51,7 +51,6 @@ function closeModal() {
     }
 }
 
-// Ferme la modale si l'utilisateur clique en dehors de la boîte
 window.addEventListener('click', (event) => {
     const modal = document.getElementById('techModal');
     if (event.target === modal) {
