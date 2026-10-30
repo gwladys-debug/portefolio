@@ -66,59 +66,92 @@
       </h2>
       <div class="title-divider"></div>
 
-<!-- ==================== PROJET 1 : PIX'NMOTION ==================== -->
-<div class="project-card">
-    <h3>Pix'nMotion</h3>
-    <p>
-        Plateforme web vitrine et portfolio pour un studio de production audiovisuelle en Martinique. 
-        Intègre une galerie multimédia dynamique avec lightbox, filtres et estimation de devis en ligne.
-    </p>
-    
-    <div class="technos-tags">
-        <span class="tag">Next.js</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Tailwind CSS</span>
-        <span class="tag">Neon PostgreSQL</span>
-        <span class="tag">Cloudinary</span>
-        <span class="tag">Resend</span>
-    </div>
-    
-    <div class="project-links">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-code"></i> Code
-        </a>
-        <a href="https://pixnmotion.com" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-external-link-alt"></i> Démo
-        </a>
-    </div>
-</div>
+      <div class="projects-grid">
+        <!-- ==================== PROJET 1 : PIX'NMOTION ==================== -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Pix'nMotion</h3>
+            <p>
+              Plateforme web vitrine et portfolio pour un studio de production
+              audiovisuelle en Martinique. Intègre une galerie multimédia
+              dynamique avec lightbox, filtres et estimation de devis en ligne.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="technos-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Neon PostgreSQL</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">Resend</span>
+            </div>
 
-<!-- ==================== PROJET 2 : TROPIK BWA ==================== -->
-<div class="project-card">
-    <h3>Tropik Bwa</h3>
-    <p>
-        Plateforme d'agencement et de menuiserie sur-mesure en Martinique. 
-        Présente un catalogue d'essences locales et un simulateur de devis interactif multi-étapes avec back-office d'administration.
-    </p>
-    
-    <div class="technos-tags">
-        <span class="tag">Next.js</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Tailwind CSS</span>
-        <span class="tag">Neon PostgreSQL</span>
-        <span class="tag">Cloudinary</span>
-        <span class="tag">Formspree</span>
-    </div>
-    
-    <div class="project-links">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-code"></i> Code
-        </a>
-        <a href="https://vercel.app" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-external-link-alt"></i> Démo
-        </a>
-    </div>
-</div>
+            <div class="project-links">
+              <a
+                href="https://github.com/gwladys-debug"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-code"></i> Code
+              </a>
+              <a
+                href="https://pixnmotion.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-external-link-alt"></i> Démo
+              </a>
+              <!-- Bouton interactif pour la modale technique -->
+              <button class="btn-tech" onclick="openModal()">
+                <i class="fas fa-database"></i> BDD & Sécurité
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== PROJET 2 : TROPIK BWA ==================== -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Tropik Bwa</h3>
+            <p>
+              Plateforme d'agencement et de menuiserie sur-mesure en Martinique.
+              Présente un catalogue d'essences locales et un simulateur de devis
+              interactif multi-étapes avec back-office d'administration.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="technos-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Neon PostgreSQL</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">Formspree</span>
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/gwladys-debug"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-code"></i> Code
+              </a>
+              <a
+                href="https://vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-external-link-alt"></i> Démo
+              </a>
+              <!-- Bouton interactif pour la modale technique -->
+              <button class="btn-tech" onclick="openModal()">
+                <i class="fas fa-database"></i> BDD & Sécurité
+              </button>
+            </div>
+          </div>
+        </div>
 
         <!-- Noctura (Fè Moun Dòmi) -->
         <div class="project-card">
@@ -236,6 +269,39 @@
         </div>
       </div>
     </main>
+
+    <!-- ==================== FENÊTRE MODALE TECHNIQUE (CP5, CP6, CP7, CP8) ==================== -->
+    <div id="techModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>
+          <i class="fas fa-server accent"></i> Architecture Back-End & Sécurité
+        </h3>
+        <div class="divider" style="margin: 0.75rem 0 1.5rem 0"></div>
+        <div class="modal-body-content">
+          <p>
+            <strong>Base de données (CP5) :</strong> Utilisation de
+            <em>Neon PostgreSQL</em> (Serverless) pour la structuration
+            relationnelle des données et la gestion des tables sécurisées.
+          </p>
+          <p>
+            <strong>Accès aux données & Médias (CP6) :</strong> Centralisation,
+            transformation et optimisation des fichiers via le CDN
+            <em>Cloudinary</em>.
+          </p>
+          <p>
+            <strong>Logique Métier & Sécurité (CP7) :</strong> Validation
+            stricte des flux par <em>Zod</em>, gestion des formulaires et
+            routage des e-mails transactionnels via <em>Resend / Formspree</em>.
+          </p>
+          <p>
+            <strong>Déploiement & CI/CD (CP8) :</strong> Pipeline automatisé sur
+            <em>Vercel</em> avec isolation rigoureuse des variables
+            d'environnement (`.env`).
+          </p>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <p>
