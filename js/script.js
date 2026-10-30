@@ -33,3 +33,28 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(card);
     });
 });
+
+// ==========================================
+// FONCTIONS POUR LA MODALE TECHNIQUE (CP5-CP8)
+// ==========================================
+function openModal() {
+    const modal = document.getElementById('techModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('techModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Ferme la modale si l'utilisateur clique en dehors de la boîte
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('techModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
