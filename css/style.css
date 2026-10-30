@@ -1,18 +1,14 @@
 /* Variables de couleurs */
 :root {
     --bg-color: #0c0a09;
-    /* Charcoal très sombre */
     --card-bg: rgba(28, 25, 23, 0.4);
-    /* Base pour le glassmorphism */
     --text-main: #f5f5f4;
-    /* Blanc cassé / Stone 100 */
     --text-muted: #a8a29e;
-    /* Gris / Stone 400 */
     --accent-gold: #fbbf24;
-    /* Or / Amber 400 */
     --border-color: rgba(68, 64, 60, 0.4);
 }
 
+/* Correction : utilisation de * au lieu de - */
 * {
     margin: 0;
     padding: 0;
@@ -64,39 +60,29 @@ body {
     letter-spacing: 2px;
 }
 
-/* Pour espacer les boutons s'ils sont côte à côte */
 .hero-container .btn {
     margin: 0.5rem;
 }
 
-/* Conteneur pour aligner les deux boutons proprement */
 .hero-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    /* Crée un espace horizontal parfait entre les deux boutons */
     margin-top: 1rem;
     flex-wrap: wrap;
-    /* Évite les bugs sur les écrans de téléphone */
 }
 
-/* Style de base réinitialisé pour le bouton classique */
 .hero-buttons .btn {
     margin: 0;
-    /* Nettoie les marges externes indésirables */
 }
 
-/* Force le bouton CV à être plus compact */
 .btn-cv {
     padding: 0.5rem 1.2rem !important;
-    /* Réduit sa hauteur et sa largeur */
     font-size: 0.75rem !important;
-    /* Diminue la taille du texte */
     letter-spacing: 1px !important;
-    /* Rapproche un peu les lettres */
     height: auto !important;
-    /* Empêche de s'étirer verticalement */
+    background-color: rgba(251, 191, 36, 0.05);
 }
 
 .accent {
@@ -163,18 +149,6 @@ body {
     box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
 }
 
-/* Bouton CV personnalisé et plus petit */
-.btn-cv {
-    padding: 0.5rem 1.2rem;
-    /* Réduit la hauteur et la largeur internes */
-    font-size: 0.75rem;
-    /* Diminue la taille de la police (d'origine à 0.85rem) */
-    letter-spacing: 1px;
-    /* Rapproche un peu les lettres */
-    background-color: rgba(251, 191, 36, 0.05);
-    /* Un léger fond pour le distinguer */
-}
-
 /* Section Projets & Grille */
 .portfolio-section {
     max-width: 1100px;
@@ -222,7 +196,7 @@ body {
     border-color: rgba(251, 191, 36, 0.4);
 }
 
-.project-content h3 {
+.project-card h3 {
     font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -232,7 +206,7 @@ body {
     color: var(--accent-gold);
 }
 
-.project-content p {
+.project-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.5;
@@ -264,6 +238,8 @@ body {
     gap: 1.5rem;
     border-top: 1px solid rgba(68, 64, 60, 0.3);
     padding-top: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .project-links a {
@@ -275,6 +251,93 @@ body {
 
 .project-links a:hover {
     color: var(--accent-gold);
+}
+
+/* ==========================================
+   STYLE POUR LE BOUTON DE LA MODALE TECHNIQUE
+   ========================================== */
+.btn-tech {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+    padding: 0;
+    font-family: inherit;
+}
+
+.btn-tech:hover {
+    color: var(--accent-gold);
+}
+
+/* ==========================================
+   STYLE DE LA FENÊTRE MODALE (CP5, CP6, CP7, CP8)
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 10, 9, 0.85);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1c1917;
+    border: 1px solid var(--accent-gold);
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.15);
+    animation: modalOpen 0.3s ease-out;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--text-muted);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--accent-gold);
+}
+
+.modal-body-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-body-content strong {
+    color: var(--text-main);
 }
 
 /* ==========================================
@@ -290,35 +353,25 @@ footer {
 footer p {
     display: inline-flex;
     align-items: center;
-    /* Centre verticalement le texte et le drapeau */
     justify-content: center;
-    /* Garde l'ensemble bien centré dans la page */
     gap: 10px;
-    /* Espace de 10px entre le texte et le drapeau */
     flex-wrap: wrap;
-    /* Évite les bugs sur les écrans de téléphones */
 }
 
 .footer-img {
     width: 24px;
-    /* Fixe une petite largeur très discrète */
     height: auto;
-    /* Garde les proportions de l'image (ne la déforme pas) */
     object-fit: contain;
-    /* Assure que l'image reste propre */
     border-radius: 2px;
-    /* Optionnel : un micro arrondi sur les bords du drapeau */
 }
 
 /* ==========================================
    AJOUT POUR L'AFFICHAGE DE L'EMAIL 
    ========================================== */
-
 .email-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    /* Crée un espace de 8px entre l'icône et votre adresse texte */
     text-decoration: none;
     vertical-align: middle;
     transition: color 0.3s ease;
@@ -326,25 +379,20 @@ footer p {
 
 .email-text {
     font-size: 1rem;
-    /* Ajuste la taille du texte pour qu'elle soit bien lisible */
     font-weight: 400;
     letter-spacing: 0.5px;
     color: var(--text-muted);
-    /* Utilise le gris doux de vos variables */
 }
 
-/* Changement de couleur au survol de l'icône ET du texte */
 .email-link:hover .email-text,
 .email-link:hover i {
     color: var(--accent-gold);
-    /* Devient or au survol */
 }
 
 /* Ajustements pour les smartphones */
 @media (max-width: 576px) {
     .hero h1 {
         font-size: 2.5rem;
-        /* Un peu plus petit pour que ça passe sur une ligne */
     }
 
     .hero p.description {
